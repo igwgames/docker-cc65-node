@@ -16,3 +16,6 @@ RUN find /tools/cc65 -type f -executable -exec cp {} tools/cc65/bin/ \;
 
 RUN mkdir -p /tools/cc65-temp/neslib_famitracker && cd /tools/cc65-temp/neslib_famitracker && wget http://shiru.untergrund.net/files/src/cc65_neslib_famitracker.zip && unzip cc65_neslib_famitracker.zip
 RUN mv /tools/cc65-temp/neslib_famitracker /tools
+
+RUN apt-get install -y python-pip
+RUN pip install awscli
